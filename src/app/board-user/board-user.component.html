@@ -1,0 +1,85 @@
+<div class="container-fluid bg-info">
+    <h3 class="text-center my-4">Pagina di ricerca partita</h3>
+    <form name="formRicerca " (ngSubmit)="onSubmit()">
+        <!-- Riga nome giocatore bianco -->
+        <div class="form-group row my-2">
+            <label for="gBianco" class="col-3 col-form-label">Nome Giocatore Bianco</label>
+            <div class="col-9">
+                <input type="text" class="form-control" [(ngModel)]="formRicerca.gBianco" name="gBianco" placeholder="Nome giocatore bianco">
+            </div>
+        </div>
+
+        <!-- Riga nome giocatore nero -->
+        <div class="form-group row my-2">
+            <label for="gNero" class="col-3 col-form-label">Nome Giocatore Nero</label>
+            <div class="col-9">
+                <input type="text" class="form-control" [(ngModel)]="formRicerca.gNero" name="gNero" placeholder="Nome giocatore nero" >
+            </div>
+        </div>
+
+        <!-- Riga data partita -->
+        <div class="form-group row my-2">
+            <label for="dataPartita" class="col-3 col-form-label">Data della partita</label>
+            <div class="col-9">
+                <input type="date" class="form-control" [(ngModel)]="formRicerca.dataPartita" name="dataPartita">
+            </div>
+        </div>
+
+        <!-- Riga luogo partita -->
+        <div class="form-group row my-2">
+            <label for="luogoPartita" class="col-3 col-form-label">Luogo della partita</label>
+            <div class="col-9">
+                <input type="text" class="form-control" [(ngModel)]="formRicerca.luogoPartita" name="luogoPartita" placeholder="Luogo" >
+            </div>
+        </div>
+
+        <!-- Riga nome evento -->
+        <div class="form-group row my-2">
+            <label for="evento" class="col-3 col-form-label">Evento</label>
+            <div class="col-9">
+                <input type="text" class="form-control" [(ngModel)]="formRicerca.evento" name="evento" placeholder="Evento" >
+            </div>
+        </div>
+
+        <!-- Riga numero round -->
+        <div class="form-group row my-2">
+            <label for="numeroRound" class="col-3 col-form-label">Numero di round</label>
+            <div class="col-9">
+                <input type="number" class="form-control" [(ngModel)]="formRicerca.numeroRound" name="numeroRound" placeholder="Round" >
+            </div>
+        </div>
+
+        <!-- Riga risultato -->
+        <div class="form-group row my-2">
+            <label for="risultato" class="col-3 col-form-label">Risultato</label>
+            <div class="col-9">
+                <select class="form-control" [(ngModel)]="formRicerca.risultato" name="risultato">
+                    <option value="0" selected></option>
+                    <option value="1-0">Vittoria giocatore bianco</option>
+                    <option value="0-2">Vittoria giocatore nero</option>
+                    <option value="0.5-0.5">Parita'</option>
+                </select>
+                <!-- <input list="risultati" id="inputRisultato" class="form-control">
+                <datalist class="form-select" id="risultati">
+                    <option value="1-0">Vittoria giocatore bianco</option>
+                    <option value="0-2">Vittoria giocatore nero</option>
+                    <option value="0.5-0.5">Parita'</option>
+                </datalist> -->
+            </div>
+        </div>
+
+        <!-- Riga lista mosse -->
+        <div class="form-group row my-2">
+            <label for="listaMosse" class="col-3 col-form-label">Lista delle mosse</label>
+            <div class="col-9">
+                <input type="text" class="form-control" [(ngModel)]="formRicerca.listaMosse" name="listaMosse" placeholder="Lista mosse" >
+            </div>
+        </div>
+
+        <div class="form-group row my-3">
+            <div class="col-2 offset-5">
+                <button  class="btn btn-secondary btn-block">Cerca partita</button>
+            </div>
+        </div>
+    </form>
+</div>
